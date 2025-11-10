@@ -5,6 +5,7 @@ FILE_NAME = "lia-logs.md"
 DIR_NAME = "logs"
 CWD = Path.cwd()
 
+
 class DailyEntry:
     def __init__(self, body_text, header, rating):
         if not all([body_text, header, rating]):
@@ -12,7 +13,6 @@ class DailyEntry:
         self.body_text = body_text
         self.header = header
         self.rating = rating
-
 
     def getDate(self):
         today = datetime.now()
@@ -30,11 +30,10 @@ class DailyEntry:
     def save_log(self):
         log_dir = self.create_log_dir()
         file_path = log_dir.joinpath(FILE_NAME)
-        
+
         with open(file_path, "a+", encoding="utf8") as f:
             f.write(self.markdownFormatter())
             f.write("\n------------\n\n")
 
     def markdownFormatter(self):
         return f"## {self.header} ({self.getDate()})\n\nToday rating: **{self.rating}**\n\n{self.body_text}\n"
-
