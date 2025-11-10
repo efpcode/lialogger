@@ -1,0 +1,17 @@
+[project]
+name = "lialogger"
+version = "0.0.0"
+description = "Logs daily activity in at internship"
+authors = [
+    {name = "efpcode",email = "efpjobhunt@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
