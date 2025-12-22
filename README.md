@@ -3,22 +3,35 @@
 This is just simple little python script that you could use 
 to log your end of the day at work. 
 
+## Requirements
+ * Python version > 3.12
+
 ## How to run!
 
 ### Steps
 
-1. Open a crontab editor by with the command below:
-`crontab -e`
-
-
-2. Add the copy/paste line below if you want the cron job to be executed 16:45 hours
-
+#### Step 1
+Download the lialogger repo:
 ```sh
-
-45 16 * * * /usr/bin/python3 /path/to/main.py
+git clone https://github.com/efpcode/lialogger.git
 ```
 
-3. Save and exit
+#### Step 2 (Optional)
+Remove .git folder 
+
+```sh
+rm -rf lialogger/.git
+```
+
+#### Step 3
+Run application with the following command:
+```sh
+cd lialogger
+
+python -m main
+```
+
+#### Step 4
+Logs are created as md at ``logs/lia-logs.md`` file.
 
 
-Hope it is of any use. 
